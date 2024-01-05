@@ -6,6 +6,6 @@
 6. notes schema is <br></br> ```{name: "name",desription: "description",user_id: ojectId,shared_by: objectId}```. when note is created user_id and shared_by has the same value which is the ObjectId of the user who has created the note.<br></br> After sharing another new note is created with same name and description, where shared_by is the ObjectId of the user who has shared the note and user_id is the Id of the user to whom note is shared.<br></br>
 7. in the request api/notes/:id/share here id is of the user to whom the note has to be shared.<br></br>
 8. text indexing is created on {name,description} in notes.<br></br>
-9. Create an .env file and provide environment variables.
+9. Create an .env file and provide environment variables.<br></br>
 10. npm i install to install all dependencies.<br></br>
 11. node index to run the code.<br></br>
