@@ -1,4 +1,4 @@
-1.used express and mongodb for this assingment because it has a large community support and mongodb has a good documentation\n.
+1.used express and mongodb for this assingment because it has a large community support and mongodb has a good documentation <br></br>
 2.used express-rate-limit library to limit request.
 3.for authorization json bearer token is used.
 4.used jsonwebtoken and bcryt libray for token generation and password encryption. 
