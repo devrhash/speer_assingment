@@ -1,4 +1,4 @@
-const { insertNewDocument } = require("../../helper");
+const { insertNewDocument, findOne } = require("../../helper");
 
 
 const shareNote = async (req, res) => {
@@ -10,6 +10,8 @@ const shareNote = async (req, res) => {
 	} catch (e) {
 		res.status(400).send({ status: 400, message: e.message });
 	}
+
+
 };
 
 module.exports = shareNote;
