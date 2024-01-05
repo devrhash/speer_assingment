@@ -1,0 +1,16 @@
+const express = require("express");
+const router = express.Router();
+const addNote = require("./addNote");
+const getNotes = require("./getNotes");
+const updateNotes = require("./updateNotes");
+const deleteNote = require("./deleteNote");
+const shareNote = require("./shareNote");
+const { tokenVerification } = require("../../middleware");
+const allreqLimiter = require("../../middleware/ratelimiter");
+router.get("/", allreqLimiter, tokenVerification, getNotes);
+router.post("/", allreqLimiter, tokenVerification, addNote);
+router.get("/:id", allreqLimiter, tokenVerification, getNotes);
+router.put("/:id", allreqLimiter, tokenVerification, updateNotes);
+router.delete("/:id", allreqLimiter, tokenVerification, deleteNote);
+router.post("/:id/share", allreqLimiter, tokenVerification, shareNote);
+module.exports = router;
